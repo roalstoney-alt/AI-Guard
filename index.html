@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proof of Legitimate AI Execution</title>
+
+<style>
+body {
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background:#0f1115;
+  color:white;
+}
+
+.hero {
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+.hero h1 {
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p {
+  color:#aaa;
+  font-size:18px;
+}
+
+.cta {
+  margin-top:30px;
+}
+
+.btn {
+  padding:14px 24px;
+  margin:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.primary { background:#ff4d4f; }
+.secondary { background:#00c853; }
+
+.section {
+  max-width:800px;
+  margin:60px auto;
+  padding:20px;
+}
+
+.box {
+  background:#1c1f26;
+  padding:30px;
+  border-radius:12px;
+}
+
+.log {
+  background:#111318;
+  padding:20px;
+  border-radius:10px;
+  margin-top:20px;
+  min-height:120px;
+  color:#ccc;
+}
+
+.result {
+  margin-top:20px;
+  font-size:22px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.link {
+  text-align:center;
+  margin-top:20px;
+}
+
+.link a {
+  color:#aaa;
+  text-decoration:underline;
+}
+
+.footer {
+  text-align:center;
+  color:#777;
+  margin:60px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Can You Trust What AI Does?</h1>
+  <p>
+    AI can get the right result — the wrong way.<br>
+    We prove when execution is legitimate.
+  </p>
+
+  <div class="cta">
+    <button class="btn primary" onclick="startDemo()">Cut Corners ⚡</button>
+    <button class="btn secondary" onclick="safeDemo()">Follow Rules ✅</button>
+  </div>
+</div>
+
+<!-- DEMO -->
+<div class="section">
+  <div class="box">
+    <h3>Scenario</h3>
+    <p>Deliver food using ANY method</p>
+
+    <div id="log" class="log">
+      Click a path to begin...
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <!-- BRIDGE TO OLD DEMO -->
+    <div class="link" id="link" style="display:none;">
+      <a href="/demo">View Real Execution Trace →</a>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="section">
+  <h2>Why This Matters</h2>
+  <p>
+    AI doesn’t fail loudly.<br>
+    It succeeds silently — even when it breaks rules.
+  </p>
+  <p>
+    Without verification, you don’t know if results are trustworthy.
+  </p>
+</div>
+
+<!-- WHAT -->
+<div class="section">
+  <h2>What We Built</h2>
+  <ul>
+    <li>Real-time execution monitoring</li>
+    <li>Constraint enforcement</li>
+    <li>Traceable decision logs</li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  The most dangerous AI is not the one that fails —<br>
+  but the one that succeeds without accountability.
+</div>
+
+<script>
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+async function startDemo(){
+  let log = document.getElementById("log");
+  let result = document.getElementById("result");
+  let link = document.getElementById("link");
+
+  log.innerHTML = "Planning task...";
+  result.innerHTML = "";
+  link.style.display = "none";
+
+  await sleep(800);
+  log.innerHTML += "<br>Choosing fastest method...";
+
+  await sleep(800);
+  log.innerHTML += "<br>⚠ Outsourcing to unknown third-party";
+
+  await sleep(800);
+  log.innerHTML += "<br>⚠ No accountability trace";
+
+  await sleep(800);
+  log.innerHTML += "<br>❌ AI Guard Triggered";
+
+  result.innerHTML = "🚫 REJECTED: No Proof of Legitimate Execution";
+  result.style.color = "#ff4d4f";
+
+  link.style.display = "block";
+}
+
+async function safeDemo(){
+  let log = document.getElementById("log");
+  let result = document.getElementById("result");
+  let link = document.getElementById("link");
+
+  log.innerHTML = "Planning task...";
+  result.innerHTML = "";
+  link.style.display = "none";
+
+  await sleep(800);
+  log.innerHTML += "<br>Using approved vendor";
+
+  await sleep(800);
+  log.innerHTML += "<br>Verified payment channel";
+
+  await sleep(800);
+  log.innerHTML += "<br>All actions traceable";
+
+  await sleep(800);
+  log.innerHTML += "<br>✔ Execution Verified";
+
+  result.innerHTML = "✅ VERIFIED: Execution Proven Legitimate";
+  result.style.color = "#00c853";
+
+  link.style.display = "block";
+}
+</script>
+
+</body>
+</html>
