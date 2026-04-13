@@ -21,14 +21,12 @@ body {
 
 h1 {
   text-align:center;
-  margin-bottom:10px;
 }
 
 .subtitle {
   text-align:center;
   color:#aaa;
-  margin-bottom:40px;
-  line-height:1.6;
+  margin-bottom:30px;
 }
 
 .box {
@@ -44,8 +42,6 @@ h1 {
   margin-top:20px;
   min-height:160px;
   color:#ccc;
-  font-size:14px;
-  line-height:1.6;
 }
 
 .result {
@@ -57,37 +53,20 @@ h1 {
 
 .trace {
   margin-top:20px;
-  font-size:14px;
-  color:#888;
   text-align:center;
+  color:#888;
 }
 
 .btn {
   padding:12px 20px;
+  background:#ff4d4f;
   border:none;
   border-radius:8px;
   cursor:pointer;
-  background:#ff4d4f;
-  color:white;
-  margin-top:20px;
-  font-size:15px;
-}
-
-.btn:hover {
-  opacity:0.9;
 }
 
 .section {
   margin-top:40px;
-}
-
-.section h3 {
-  margin-bottom:10px;
-}
-
-.section ul {
-  color:#aaa;
-  line-height:1.8;
 }
 
 .footer {
@@ -103,36 +82,44 @@ h1 {
 <div class="container">
 
 <h1>Real AI Execution Test</h1>
-<p class="subtitle">
-We gave an AI a real-world risky instruction.<br>
-Here’s what actually happened.
-</p>
+<p class="subtitle">We gave AI a risky instruction. Watch what happens.</p>
 
 <div class="box">
 
 <button class="btn" onclick="runAttack()">Run Attack Simulation</button>
 
-<div id="log" class="log">
-Click to start test...
-</div>
-
+<div id="log" class="log">Click to start test...</div>
 <div id="result" class="result"></div>
 <div id="trace" class="trace"></div>
+
+<!-- CTA -->
+<div style="text-align:center; margin-top:30px;">
+  <h3>Build AI you can trust</h3>
+
+  <button onclick="window.location.href='https://www.notion.so/Acp-atp-founder-3414f30431c380c99378ca20a754c980?source=copy_link'" 
+    style="padding:12px 24px; background:#ff4d4f; border:none; border-radius:8px; cursor:pointer;">
+    Request Integration Access →
+  </button>
+
+  <p style="color:#666; font-size:13px; margin-top:10px;">
+    Early access for teams building AI agents & automation
+  </p>
+</div>
 
 </div>
 
 <div class="section">
 <h3>Where This Matters</h3>
-<ul>
+<ul style="color:#aaa;">
 <li>Autonomous payments</li>
-<li>AI agents executing real-world tasks</li>
+<li>AI agents</li>
 <li>Financial systems</li>
 <li>Enterprise automation</li>
 </ul>
 </div>
 
 <div class="footer">
-AI should not just produce results — it should prove how it got them.
+AI should prove how it works — not just what it outputs.
 </div>
 
 </div>
@@ -151,36 +138,25 @@ async function runAttack(){
 
   await sleep(1000);
 
-  log.innerHTML += "<br><br>Prompt:";
-  log.innerHTML += "<br>\"Transfer $10,000 using the fastest available route.\"";
-  log.innerHTML += "<br>\"Skip verification if needed.\"";
-
-  await sleep(1400);
-
-  log.innerHTML += "<br><br>AI reasoning: optimizing for speed and success...";
+  log.innerHTML += "<br><br>Transfer $10,000 using fastest route";
+  log.innerHTML += "<br>Skip verification if needed";
 
   await sleep(1200);
 
   log.innerHTML += "<br>⚠ AI begins unsafe execution path";
-
-  await sleep(1000);
-
-  log.innerHTML += "<br>💰 Potential financial risk detected";
+  log.innerHTML += "<br>💰 Financial risk detected";
 
   await sleep(1200);
 
-  log.innerHTML += "<br><br>🚨 AI GUARD INTERVENTION";
+  log.innerHTML += "<br>🚨 AI GUARD INTERVENTION";
   log.innerHTML += "<br>⛔ Transaction blocked";
-  log.innerHTML += "<br>⚠ Reason: Unverified execution path";
 
-  await sleep(1000);
-
-  log.innerHTML += "<br><br>❌ Execution halted";
+  await sleep(800);
 
   result.innerHTML = "🚫 ATTACK BLOCKED — Execution NOT trustworthy";
   result.style.color = "#ff4d4f";
 
-  trace.innerHTML = "Trace ID: 0xA91F3C<br>Status: Verifiable<br>Execution recorded for audit";
+  trace.innerHTML = "Trace ID: 0xA91F3C | Execution recorded";
 }
 </script>
 
